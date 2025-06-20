@@ -1,32 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-:root {
-    --cor-principal:rgb(0, 0, 0);
-    --cor-secundaria: #284260;
-    --cor-destaque: #e69cff;
-    --cor-prin: #e69cff;
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-    font-family: 'Chakra Petch', sans-serif;
-    color: var(--cor-principal);
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h5 {
-    color: var(--cor-secundaria);
-    font-weight: 700;
+header {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+  border-radius: 0 0 3rem 3rem;
+  animation: fadeIn 1.5s ease;
 }
 
-.lead, .btn-link {
-    color: var(--cor-destaque);
-    font-weight: 700;
+header img {
+  border: 5px solid white;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 }
 
-a, .btn-link:hover {
-    color: var(--cor-principal)
-    color var(--cor-prin)
+header img:hover {
+  transform: scale(1.05);
 }
 
-a:hover{
-    color: var(--cor-destaque);
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+header p.lead {
+  font-size: 1.2rem;
+}
+
+header a {
+  color: #ffd54f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0.4rem;
+  padding: 0.6em 1.2em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
+}
+
+main h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #f0f0f0;
+  animation: fadeIn 1s ease;
+}
+
+.card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  animation: slideUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.8);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.btn-link {
+  color: #82b1ff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #448aff;
+  text-decoration: underline;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.modal-header {
+  background-color: #292929;
+  color: white;
+}
+
+.modal-footer a {
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #82b1ff;
+}
+
+.modal-footer a:hover {
+  color: #448aff;
+}
+
+footer {
+  margin-top: 4rem;
+  border-top: 2px solid #2c2c2c;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #1a1a1a;
+  color: #aaa;
+  animation: fadeIn 1s ease;
+}
+
+footer a {
+  color: #82b1ff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #448aff;
+  text-decoration: underline;
+}
+
+footer i {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 160px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.5em 1em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
